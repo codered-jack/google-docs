@@ -20,7 +20,7 @@ function TextEditor() {
     const {id} = router.query;
 
     const [snapshot] = useDocumentOnce(
-        db.collection("userDocs").doc(session.user.email).collection("docs").doc(id)
+        db.collection("userDocs").doc(session?.user.email).collection("docs").doc(id)
       );
 
       useEffect(() => {
